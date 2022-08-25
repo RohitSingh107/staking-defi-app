@@ -3,6 +3,7 @@
 pragma solidity >=0.8.13;
 
 import "openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import "forge-std/console.sol";
 
 error Staking__TransferFailed();
 error Staking__NeedsMoreThanZero();
@@ -38,6 +39,7 @@ contract Staking {
     constructor(address stakingToken, address rewardToken) {
         s_stakingToken = IERC20(stakingToken);
         s_rewardToken = IERC20(rewardToken);
+        console.log("Staking Conract Deployeed.");
     }
 
     function earned(address account) public view returns (uint256) {
