@@ -39,7 +39,7 @@ contract Staking {
     constructor(address stakingToken, address rewardToken) {
         s_stakingToken = IERC20(stakingToken);
         s_rewardToken = IERC20(rewardToken);
-        console.log("Staking Conract Deployeed.");
+        // console.log("deployer is %s", msg.sender);
     }
 
     function earned(address account) public view returns (uint256) {
